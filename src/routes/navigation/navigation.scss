@@ -1,0 +1,34 @@
+.navigation {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;  
+    background-color:#ff9501; 
+    .logo-container {
+      height: 100%;
+      width: 70px;
+      margin-top: 15px;
+      margin-left: 15px;
+    }
+  
+    .nav-links-container {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+  
+      .nav-link {
+        padding: 8px 10px;
+        cursor: pointer;
+        text-decoration:solid;
+         color:rgb(255, 115, 0);  
+        background-color: white;
+        font-size: 12px;
+      }
+    }
+  }
+  .bttn{
+    margin-right: 7px;
+  }

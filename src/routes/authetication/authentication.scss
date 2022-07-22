@@ -1,0 +1,15 @@
+.container{
+    width:900px;
+    display: flex; 
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin: 30px auto;    
+}
+@media screen and (max-width:800px){
+     .container{
+          flex-direction: column;
+            width:unset;
+            -webkit-box-align: center;
+            align-items: center;
+        }
+}
