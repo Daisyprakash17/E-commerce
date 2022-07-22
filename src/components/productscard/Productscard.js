@@ -18,6 +18,7 @@ export default function Productscard({product}) {
     }
     const num=Math.floor(Math.random() * 1000);
   return (
+    <div className='themaincontainer'>
     <div className='product-card-container'>
        <img src={product.imageUrl} alt={product.name} />
        <div className='footer'>
@@ -27,8 +28,9 @@ export default function Productscard({product}) {
        <div className="btn-cnt">
        <Button buttontype='inverted' onClick={viewproduct} >More Info</Button>  
        <Button buttontype='inverted'  onClick={addthisproduct} >Add to cart</Button>   
-    </div>
-      <div className='rating'>⭐⭐⭐⭐ {num} </div>
+    </div> 
+    </div> 
+    <div className='rating'>⭐⭐⭐⭐  {num}</div>
     </div>
   )
 }
