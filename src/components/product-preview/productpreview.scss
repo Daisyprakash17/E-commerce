@@ -1,0 +1,55 @@
+.preview-container{ 
+    width:900px;
+    display: flex; 
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin: 0 auto;  
+    background-color: #F7F7F7;
+    padding: 50px 200px;
+}
+@media screen and (max-width:800px){
+    .preview-container{
+         flex-direction: column;
+           width:unset;
+           -webkit-box-align: center;
+           align-items: center;
+       }
+       .preview-img{
+        margin-bottom: 15px;
+       }
+}
+.preview-img{   
+    width: 350px;
+    height: 400px; 
+}
+.preview-detail{
+    width: 450px;
+    height: 500px;
+    background-color: white;
+    padding: 15px;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 5px;
+  }
+  .first{
+    font-size: 32px;
+  }
+  .second{
+        font-size: 24px;
+        color: #3EC70B;
+  }
+  .third{
+    font-size: 20px;
+  }
+  .four{
+        color: #34B3F1;
+  }
+  .five{
+    font-size: 14px;
+  }
+  .six{
+    font-size: 16px;
+  }

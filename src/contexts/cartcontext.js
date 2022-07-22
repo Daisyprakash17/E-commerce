@@ -59,17 +59,17 @@ export const Cartprovider=({children})=>{
     const [totalprices,settotalprices]=useState(0);
     const additemtocart=  (producttoadd)=>{
           settotalitems(totalitems+1); 
-          settotalprices(totalprices+producttoadd.price)
+          settotalprices(totalprices+producttoadd.price*40)
         setcartitems(addcartitem(cartitems,producttoadd));
     }
     const removeitemfromcart=(prodocttoremove)=>{
         settotalitems(totalitems-1);
-        settotalprices(totalprices-prodocttoremove.price); 
+        settotalprices(totalprices-prodocttoremove.price*40); 
         setcartitems(removecartitem(cartitems,prodocttoremove));
     }
     const deleteitem=(producttodelete)=>{
         settotalitems(totalitems-producttodelete.quantity);
-        settotalprices(totalprices-producttodelete.price*producttodelete.quantity);
+        settotalprices(totalprices-producttodelete.price*producttodelete.quantity*40);
         setcartitems(deletecartitem(cartitems,producttodelete));
     }
     const value={iscartopen,setiscartopen,additemtocart,cartitems,totalitems,removeitemfromcart,totalprices,deleteitem};

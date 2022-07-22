@@ -1,9 +1,11 @@
 import '../categorylist/categorylist.scss'
-import {useParams} from  'react-router-dom'
+import {useParams,Route,Routes} from  'react-router-dom'
 import React from 'react'
 import { useContext ,useState,useEffect } from 'react';
 import { Categoriescontext } from '../../contexts/categoriescontext';
 import Productscard from '../../components/productscard/Productscard';
+import Productpreview from '../../components/product-preview/Productpreview'
+
 export default function Categorylist() {
 
 
@@ -18,17 +20,25 @@ export default function Categorylist() {
     },[category,categorymap]);
     console.log(products);
 
-
+    const Currentcategory= ()=>{
+        return <>
+            <h2 className='category-list-title'>{category.toUpperCase()}</h2>
+            <div className='category-list-container'>
+       {products &&
+       products.map((element)=>{
+               return <Productscard key={element.id} product={element}/>
+           })
+       }
+           </div>
+           </>
+    
+    }
     return (
         <>
-            <h2 className='category-list-title'>{category.toUpperCase()}</h2>
-    <div className='category-list-container'>
-            {products &&
-            products.map((element)=>{
-                    return <Productscard key={element.id} product={element}/>
-                })
-            }
-    </div>
+           <Routes>
+            <Route index element={<Currentcategory/>}></Route>
+            <Route path='productinfo'element={<Productpreview/>}/>
+           </Routes>
     </>
   )
 }

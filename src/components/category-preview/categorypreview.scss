@@ -1,7 +1,7 @@
 .category-preview-container {
     display: flex;
     flex-direction: column;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
   
     .category-preview-title {
       font-size: 28px;
@@ -24,7 +24,15 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
   }
-  @media screen and (max-width:800px){
+  @media only screen and (max-width:1100px){
+    .preview{
+      display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+     
+    row-gap: 60px;
+    }
+  }
+  @media only screen and (max-width:800px){
     .preview{
       display: grid;
     grid-template-columns: 1fr 1fr;

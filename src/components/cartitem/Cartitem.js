@@ -8,7 +8,7 @@ export default function Cartitem({item}) {
         <img src={item.imageUrl} alt="" />
         <div className="item-details">
         <span className='name'>{item.name}</span>
-        <span className='price'>{item.quantity} X ₹{item.price}</span>
+        <span className='price'>{item.quantity} X ₹{item.price*40}</span>
         </div>
     </div>
   )

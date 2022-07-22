@@ -7,6 +7,7 @@ import {BrowserRouter} from 'react-router-dom'
 import { UserProvider } from './contexts/Usercontext';
 import { Categoriesprovider } from './contexts/categoriescontext';
 import { Cartprovider } from './contexts/cartcontext';
+import { PreviewProvider } from './contexts/Previewcontext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -14,7 +15,9 @@ root.render(
     <UserProvider>
       <Categoriesprovider>
         <Cartprovider>
+          <PreviewProvider>
             <App />
+          </PreviewProvider>
     </Cartprovider>
     </Categoriesprovider>
     </UserProvider>

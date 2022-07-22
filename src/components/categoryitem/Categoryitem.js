@@ -11,7 +11,7 @@ export default function Categoryitem(props) {
                     <div className='background-image' style={{backgroundImage:`url(${props.element.imageUrl})`}} /> 
                   
               <div className='category-body-container'>
-                    <h2>{props.element.title}</h2>
+                    <h2>{props.element.title.toUpperCase()}</h2>
                     <p>Shop Now</p>
               </div>
           </div> 
