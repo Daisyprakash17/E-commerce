@@ -14,10 +14,11 @@ export default function Cartdropdown() {
     navigate('checkout')
   }
   return (
-    <div className='cart-dropdown-container'>
+    <div className='cart-dropdown-container'> 
+      
       <div className='cart-items'>
-      {
-        cartitems.map(item=>
+      {    
+          cartitems.map(item=>
          {
           return <Cartitem key={item.id} item={item}></Cartitem>
           }

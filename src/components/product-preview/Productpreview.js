@@ -8,29 +8,17 @@ export default function Productpreview() {
   
   const {preproduct}=useContext(PreviewContext);
   const {additemtocart}=useContext(CartContext);
-  
-  const [count,setcount]=useState(1)
+   
 
   const addthisproduct=async ()=>{  
-    for(let j=0;j<count;j++)
-   {
-    console.log('add for ',count)
-    setTimeout(() => {
-      
+   
       additemtocart(preproduct);
-    }, 0.001);
-    }
+   
   } 
 
 
 
-  const decrease= ()=>{ 
-    if(count>1)
-     setcount(count-1); 
-  }
-  const increase=()=>{
-    setcount(count+1);
-  }
+ 
   return (
     <div className='preview-container'>
        <div className='preview-img'>

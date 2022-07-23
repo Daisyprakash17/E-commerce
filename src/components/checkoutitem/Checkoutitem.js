@@ -27,7 +27,7 @@ export default function Checkoutitem(product) {
 
 
 
-         <span className='price'>{price*40}</span>
+         <span  className='price'>{price*40}</span>
         <div className='remove-button' onClick={()=>deleteitem(product.product)}>&#10005;</div>
       
     </div>
