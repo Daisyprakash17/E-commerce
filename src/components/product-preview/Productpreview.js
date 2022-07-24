@@ -1,11 +1,18 @@
 import '../product-preview/productpreview.scss'
 import React from 'react'
 import { useContext,useState } from 'react'
+import ReactJsAlert from "reactjs-alert";
 import { PreviewContext } from '../../contexts/Previewcontext'
 import { CartContext } from '../../contexts/cartcontext'
 import Button from '../button/Button';
 export default function Productpreview() {
   
+
+     // this is for the alert
+  const [status, setStatus] = useState(false);
+  const [type, setType] = useState("success");
+  const [title, setTitle] = useState("This is a alert");
+
   const {preproduct}=useContext(PreviewContext);
   const {additemtocart}=useContext(CartContext);
    
@@ -13,7 +20,11 @@ export default function Productpreview() {
   const addthisproduct=async ()=>{  
    
       additemtocart(preproduct);
-   
+    
+       // this for the alert
+       setStatus(true);
+       setType("success");
+       setTitle("Product has been successfully added to cart");
   } 
 
 
@@ -34,6 +45,13 @@ export default function Productpreview() {
         
        <Button buttontype='inverted'  onClick={addthisproduct} >Add to cart</Button>  
        </div>
+       <ReactJsAlert // this is for the alert
+          status={status} // true or false
+          type={type} // success, warning, error, info
+          title={title} 
+          Close={() => setStatus(false)} 
+          autoCloseIn={1000}  
+        />
     </div>
   )
 }
